@@ -277,7 +277,7 @@ Both the `SQL` and `Postgres` formats respect the `DateStyle` value, mentioned e
 
 The `time` data type (also called `time without time zone`) can store a specific time of day without an associated timezone or date.
 
-> PostgreSQL does not recommend using `time with time zone`, the `time` type's variant that pairs a time zone with the clock time.  This is due to complications and ambiguities that arise that cannot be resolved without additional context, like an associated date.  For times that require a time zone component, the `timezonetz` type, covered in the next section, is a good alternative that provides the date component context.
+> PostgreSQL does not recommend using `time with time zone`, the `time` type's variant that pairs a time zone with the clock time.  This is due to complications and ambiguities that arise that cannot be resolved without additional context, like an associated date.  For times that require a time zone component, the `timestamptz` type, covered in the next section, is a good alternative that provides the date component context.
 
 When processing input for `time` columns, PostgreSQL can interpret many different formats to determine the correct time to store.  Most of these are variations on the [ISO 8601 standard](https://en.wikipedia.org/wiki/ISO_8601), with flexibility to catch different variations.
 
